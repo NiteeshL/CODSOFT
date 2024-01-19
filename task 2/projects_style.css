@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rethink Sans', sans-serif;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    z-index: 10;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+nav .logo{
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.active a {
+    text-decoration: none;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 2px;
+}
+
+h1{
+    text-align: center;
+    font-size: 48px;
+    margin: 100px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    padding: 20px;
+    grid-gap: 40px;
+    margin: 150px auto;
+}
+
+.cards h1{
+    text-align: center;
+    font-size: 48px;
+    margin: 5px;
+}
+
+.card{
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+.container{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+}
+
+.cards img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.container::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+
+
+.details{
+    padding: 20px 10px;
+}
+
+.details>h3{
+    color: #ffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+
+.details>p{
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+@keyframes pulse {
+    0% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.05);   
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+.card:hover {
+    animation: pulse 0.5s ease infinite;
+    }
+
+@media (max-width: 768px) {
+        .cards {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+    }

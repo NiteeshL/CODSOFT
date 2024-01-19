@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rethink Sans', sans-serif;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    z-index: 10;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+nav .logo{
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.active a {
+    text-decoration: none;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 2px;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+h3{
+    margin: 5px;
+    color: white;
+}
+
+.skill{
+    width: 500px;
+    background-color: black;
+    margin: 150px auto;
+    color: black;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 10px;
+}
+
+.skill li{
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.bar{
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0,0,0,0.3);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,.1);
+}
+
+.bar:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, #2193b0 0%,#6dd5ed 100%);
+}
+
+.html{
+    width: 50%;
+    animation: html 3s;
+}
+
+.css{
+    width: 30%;
+    animation: css 3s;
+}
+
+.js{
+    width: 10%;
+    animation: js 3s;
+}
+
+.py{
+    width: 15%;
+    animation: py 3s;
+}
+
+.java{
+    width: 5%;
+    animation: java 3s;
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 30%;
+    }
+}
+@keyframes js{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 10%;
+    }
+}
+@keyframes py{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 15%;
+    }
+}
+@keyframes java{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 5%;
+    }
+}
